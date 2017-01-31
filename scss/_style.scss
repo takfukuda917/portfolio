@@ -1,0 +1,343 @@
+// ============
+// Variables
+// ============
+
+$white: #ffffff;
+$black: #262626;
+$menu-animation-duration: 400ms;
+$menu-animation-timing:   ease-out;
+
+// ============
+// Fonts
+// ============
+
+@font-face {
+  font-family: brandon-med;
+  src: url(fonts/Brandon_Grotesque_Medium.otf);
+}
+
+@font-face {
+  font-family: brandon-bold;
+  src: url(fonts/Brandon_Grotesque_Bold.otf);
+}
+
+@font-face {
+  font-family: cloud;
+  src: url(fonts/Cloud-Light.otf);
+}
+
+@font-face {
+  font-family: harenosora;
+  src: url(fonts/Harenosora.otf);
+}
+
+
+// ============
+// BASE STYLES
+// ============
+
+body {
+}
+
+h1 {
+    font-family: brandon-med;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+
+}
+
+a {
+    color: $black;
+    font-family: brandon-med;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+// ============
+// HEADER
+// ============
+
+.page-header {
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: $white;
+}
+
+.page-nav {
+    width: 100%;
+    align-items: center;
+    padding: 25px 7.14%;
+}
+
+.logo-container {
+    img {
+        width: 35px;
+    }
+}
+
+.burger-container {
+    margin-left: auto;
+    z-index: 999999;
+}
+
+.mobile-link-container {
+    background-color: $white;
+    position: fixed;
+    top: 0; right: 0;
+    padding: 100px 0 0 25px;
+    width: 45%; height: 100vh;
+    opacity: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    li {
+        margin-bottom: 30px;
+    }
+}
+
+// Burger Icon
+
+.burger-click-region {
+  margin-bottom: 12px;
+  width: 25px;
+  height: 6px;
+  cursor: pointer;
+}
+
+.burger-menu-piece {
+  display: block;
+  position: relative;
+  width: 25px;
+  border-top: 2px solid $black;
+  transform-origin: 50% 50%;
+  transition: transform $menu-animation-duration $menu-animation-timing;
+  
+  &:nth-child(1) {
+    top: 0;
+  }
+  
+  &:nth-child(2) {
+    top: 7px;
+    opacity: 1;
+    transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+  }
+  
+  &:nth-child(3) {
+    top: 14px;
+  }
+  
+  .active & {
+    &:nth-child(1) {
+      animation: burger-open-top $menu-animation-duration $menu-animation-timing forwards;
+    }
+    
+    &:nth-child(2) {
+      opacity: 0;
+      transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+    }
+    
+    &:nth-child(3) {
+      top: 20px;
+      animation: burger-open-bot $menu-animation-duration $menu-animation-timing forwards;
+    }
+  }
+  
+  .closing & {
+    &:nth-child(1) {
+      animation: burger-close-top $menu-animation-duration $menu-animation-timing forwards;
+    }
+    
+    &:nth-child(3) {
+      animation: burger-close-bot $menu-animation-duration $menu-animation-timing forwards;
+    }
+  }
+}
+
+@keyframes burger-open-top {
+  50% {
+    transform: translate3d(0, 12px, 0);
+  }
+  100% {
+    transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+}
+
+@keyframes burger-open-bot {
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+  100% {
+    transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+}
+
+@keyframes burger-close-top {
+  0% {
+    transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes burger-close-bot {
+  0% {
+    transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// ============
+// FOOTER
+// ============
+
+
+// ============
+// INDEX
+// ============
+
+.homepage-hero-section {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+        font-size: 21px;
+        line-height: 1.9;
+    }
+}
+
+.hero-contents-container {
+
+}
+
+.hero-jap {
+    h1 {
+        font-size: 17px;
+        font-family: harenosora;
+    }
+}
+
+.indicator-container {
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// ============
+// WORK
+// ============
+
+.work-container {
+    text-align: center;
+
+    h2 {
+        text-transform: uppercase;
+        font-family: brandon-bold;
+    }
+}
+
+
+// =============================================
+// =============================================
+// TABLET
+// =============================================
+// =============================================
+
+@media screen and (min-width: 48em) {
+    // ============
+    // BASE STYLES
+    // ============
+    
+    // ============
+    // HEADER
+    // ============
+
+
+    // ============
+    // FOOTER
+    // ============
+
+
+    // ============
+    // INDEX
+    // ============
+
+
+    // ============
+    // WORK
+    // ============
+}
+
+
+// =============================================
+// =============================================
+// DESKTOP
+// =============================================
+// =============================================
+
+@media screen and (min-width: 64em) {
+    // ============
+    // BASE STYLES
+    // ============
+    
+    // ============
+    // HEADER
+    // ============
+
+
+    // ============
+    // FOOTER
+    // ============
+
+
+    // ============
+    // INDEX
+    // ============
+
+
+    // ============
+    // WORK
+    // ============
+}
