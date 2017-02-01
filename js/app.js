@@ -27,3 +27,5 @@ $('.burger-click-region').on('click', function() {
     }, clickDelay);
   }
 });
+
+/* Works Section */
