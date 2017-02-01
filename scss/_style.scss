@@ -40,11 +40,12 @@ body {
 }
 
 h1 {
-    font-family: brandon-med;
+  font-family: brandon-med;
 }
 
 h2 {
-
+  font-family: brandon-bold;
+  color: $white;
 }
 
 h3 {
@@ -93,6 +94,7 @@ ul {
     position: fixed;
     top: 0; left: 0;
     background-color: $white;
+    z-index: 999999999999999;
 }
 
 .page-nav {
@@ -116,7 +118,7 @@ ul {
     background-color: $white;
     position: fixed;
     top: 0; right: 0;
-    padding: 100px 0 0 25px;
+    padding: 130px 0 0 25px;
     width: 45%; height: 100vh;
     opacity: 0;
     text-transform: uppercase;
@@ -237,45 +239,129 @@ ul {
 // ============
 
 .homepage-hero-section {
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    h1 {
-        font-size: 21px;
-        line-height: 1.9;
-    }
+  h1 {
+      font-size: 19px;
+      line-height: 1.9;
+  }
 }
 
 .hero-contents-container {
+  height: 100px;
+  overflow: hidden;
+  z-index: -999999999;
 
+  ul {
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+  }
+}
+
+// @-webkit-keyframes opacity {
+//   0%, 100% {opacity:0;}
+//   50% {opacity:1;}
+// }
+
+// @-webkit-keyframes change {
+//   0%, 12%, 100% {transform:translateY(0);}
+//   17%,29% {transform:translateY(-25%);}
+//   34%,46% {transform:translateY(-50%);}
+//   51%,63% {transform:translateY(-75%);}
+//   68%,80% {transform:translateY(-50%);}
+//   85%,97% {transform:translateY(-25%);}
+// }
+
+@keyframes change {
+   0%, 30%, 100% {transform:translateY(0);}
+  33%, 63% {transform:translateY(-33%);}
+  66%, 96% {transform:translateY(-66.6666666666666%);}
 }
 
 .hero-jap {
-    h1 {
-        font-size: 17px;
-        font-family: harenosora;
-    }
+  h1 {
+    font-size: 0.9rem;
+    font-family: harenosora;
+  }
 }
 
 .indicator-container {
-    p {
-        margin-bottom: 0;
-    }
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  text-align: center;
+
+  p {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  &:hover {
+    animation: bounce 1.5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
 }
 
 // ============
 // WORK
 // ============
 
+.works-section {
+  margin: 30px 0 100px 0;
+}
+
 .work-container {
+    position: relative;
     text-align: center;
+    overflow: hidden;
+    margin-bottom: 15px;
 
     h2 {
-        text-transform: uppercase;
-        font-family: brandon-bold;
+      font-size: 27px;
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+
+    img {
+      z-index: -999;
+    }
+}
+
+.overlay {
+  background-color: $white;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
 }
 
 
