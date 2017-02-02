@@ -62,11 +62,12 @@ h5 {
 }
 
 h6 {
-
+  font-family: brandon-bold;
+  text-transform: uppercase;
 }
 
 p {
-
+  font-family: cloud;
 }
 
 a {
@@ -79,10 +80,27 @@ ul {
     margin: 0;
 }
 
+section {
+  margin: 30px 0 100px 0;
+  padding: 0 .625rem;
+}
+
 .flexbox {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title-container {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 70px;
 }
 
 
@@ -118,7 +136,7 @@ ul {
 .mobile-link-container {
     background-color: $white;
     position: fixed;
-    top: 0; right: 0;
+    top: 0; right: -500px;
     padding: 130px 0 0 25px;
     width: 45%; height: 100vh;
     opacity: 0;
@@ -266,22 +284,14 @@ ul {
   }
 }
 
-// @-webkit-keyframes opacity {
-//   0%, 100% {opacity:0;}
-//   50% {opacity:1;}
-// }
-
-// @-webkit-keyframes change {
-//   0%, 12%, 100% {transform:translateY(0);}
-//   17%,29% {transform:translateY(-25%);}
-//   34%,46% {transform:translateY(-50%);}
-//   51%,63% {transform:translateY(-75%);}
-//   68%,80% {transform:translateY(-50%);}
-//   85%,97% {transform:translateY(-25%);}
-// }
+@-webkit-keyframes change {
+  0%, 30%, 100% {transform:translateY(0);}
+  33%, 63% {transform:translateY(-33%);}
+  66%, 96% {transform:translateY(-66.6666666666666%);}
+}
 
 @keyframes change {
-   0%, 30%, 100% {transform:translateY(0);}
+  0%, 30%, 100% {transform:translateY(0);}
   33%, 63% {transform:translateY(-33%);}
   66%, 96% {transform:translateY(-66.6666666666666%);}
 }
@@ -302,6 +312,7 @@ ul {
   transition: .5s;
 
   p {
+    font-family: brandon-med;
     font-size: 13px;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -310,11 +321,6 @@ ul {
   &:hover {
     transform: translateY(-30px);
   }
-}
-
-.works-section {
-  margin: 30px 0 100px 0;
-  padding: 0 .625rem;
 }
 
 .work-container {
@@ -329,7 +335,7 @@ ul {
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 1.5rem;
     text-transform: uppercase;
     position: absolute;
     z-index: 99999;
@@ -337,18 +343,13 @@ ul {
 
   img {
     opacity: 0.4;
-    transition: opacity 1.5s, transform 5s;
+    transition: opacity 1.5s, transform 8s linear;
   }
 
   &:hover img {
     opacity: 1;
     transform: scale(1.2);
   }
-}
-
-.section-title-container {
-  text-align: center;
-  text-transform: uppercase;
 }
 
 // ============
