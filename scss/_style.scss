@@ -74,6 +74,14 @@ p {
 a {
     color: $black;
     font-family: brandon-med;
+
+    &:hover {
+      color: $darkgrey;
+    }
+
+    &:focus {
+      color: $black;
+    }
 }
 
 ul {
@@ -108,6 +116,13 @@ section {
   }
 }
 
+.mobile-only {
+  display: block;
+}
+
+.mobile-hidden {
+  display: none;
+}
 
 // ============
 // HEADER
@@ -119,6 +134,8 @@ section {
   top: 0; left: 0;
   background-color: $white;
   z-index: 999999999999999;
+  border-bottom: solid 0 $lightgrey;
+  transition: .3s;
 }
 
 .page-nav {
@@ -257,7 +274,7 @@ section {
 }
 
 .scrolled {
-  border-bottom: solid 2px $lightgrey;
+  border-bottom-width: 1px;
 }
 
 // ============
@@ -405,6 +422,12 @@ section {
   }
 }
 
+#works-section {
+  .row {
+    padding: 0 1.25rem;
+  }
+}
+
 #about-section {
   margin-bottom: 70px;
 
@@ -435,12 +458,41 @@ section {
     // BASE STYLES
     // ============
     
+    .mobile-only {
+      display: none;
+    }
+
+    .mobile-hidden {
+      display: block;
+    }
+    
     // ============
     // HEADER
     // ============
+    
+    .logo-container {
+      img {
+        width: 40px;
+      }
+    }
 
-    .mobile-link-container, .burger-container {
-      display: none;
+    .page-nav {
+      padding: 20px 7.14%;
+    }
+
+    .nav-link-container {
+      display: flex;
+      margin-left: auto;
+      text-transform: uppercase;
+      font-size: 15px;
+
+      li:not(:last-child) {
+        padding: 0 13px;
+      }
+
+      li:last-child {
+        padding-left: 35px;
+      }
     }
 
 
@@ -448,11 +500,65 @@ section {
     // FOOTER
     // ============
 
+    .page-footer {
+      .contact-form {
+        height: 210px;
+
+        h4 {
+          font-size: 26px;
+        }
+      }
+
+      .social-links-container {
+        .socilal-links {
+          padding: 0 15px;
+          font-size: 22px;
+        }
+      }
+
+      .copyright-container {
+        font-size: 12px;
+      }
+    }
 
     // ============
     // INDEX
     // ============
 
+    .homepage-hero-section {
+      h1 {
+        font-size: 35px;
+      }
+
+      .hero-contents-container {
+        height: 180px;
+
+        .hero-jap {
+          h1 {
+            font-size: 28px;
+            font-family: harenosora;
+          }
+        }
+      }
+    }
+
+    .section-title-container {
+      h3 {
+        font-size: 18px;
+      }
+    }
+
+    #about-section .about-contents-container .about-image-container {
+      margin-bottom: 50px;
+    }
+
+    .about-desc {
+      text-align: center;
+
+      h6:not(:first-child) {
+        margin-top: 40px;
+      }
+    }
 
     // ============
     // WORK
@@ -474,17 +580,72 @@ section {
     // ============
     // HEADER
     // ============
+    
+    .logo-container {
+      img {
+        width: 45px;
+      }
+    }
 
+    .page-nav {
+      padding: 30px 9.14%;
+    }
+
+    .section-title-container {
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    .about-desc {
+      text-align: left;
+
+      h6:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
 
     // ============
     // FOOTER
     // ============
+    
+    .page-footer {
+      .contact-form {
+        height: 240px;
 
+        h4 {
+          font-size: 28px;
+        }
+      }
+
+      .social-links-container {
+        height: 80px;
+
+        .socilal-links {
+          padding: 0 18px;
+          font-size: 23px;
+        }
+      }
+
+      .copyright-container {
+        height: 60px;
+        font-size: 13px;
+      }
+    }
 
     // ============
     // INDEX
     // ============
 
+    .work-container {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    .section-title-container {
+      margin-bottom: 110px;
+    }
 
     // ============
     // WORK
