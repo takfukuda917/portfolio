@@ -343,10 +343,10 @@ section {
 
   ul {
     -webkit-animation-name: change;
-    -webkit-animation-duration: 10s;
+    -webkit-animation-duration: 12s;
     -webkit-animation-iteration-count: infinite;
     animation-name: change;
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
   }
 }
@@ -358,9 +358,9 @@ section {
 }
 
 @keyframes change {
-  0%, 30%, 100% {transform:translateY(0);}
-  33%, 63% {transform:translateY(-33%);}
-  66%, 96% {transform:translateY(-66.6666666666666%);}
+  0%, 31%, 100% {transform:translateY(0);}
+  33%, 64% {transform:translateY(-33%);}
+  66%, 98% {transform:translateY(-66.6666666666666%);}
 }
 
 .hero-jap {
@@ -390,6 +390,9 @@ section {
     font-size: 13px;
     text-transform: uppercase;
     margin-bottom: 0;
+  }
+  i {
+    font-size: 13px;
   }
 }
 
@@ -699,6 +702,15 @@ section {
             font-family: harenosora;
           }
         }
+      }
+    }
+
+    .indicator-container {
+      p {
+        font-size: 15px;
+      }
+      i {
+        font-size: 15px;
       }
     }
 
