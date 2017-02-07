@@ -3,7 +3,7 @@ $(document).foundation();
 
 /* Header Border */
 $(window).on("scroll", function () {
-  if($(this).scrollTop() > $(window).height()) {
+  if($(this).scrollTop() > $(window).height()-200) {
     $('.page-header').addClass("scrolled");
   } else {
     $('.page-header').removeClass("scrolled");

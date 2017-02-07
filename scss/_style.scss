@@ -343,10 +343,10 @@ section {
 
   ul {
     -webkit-animation-name: change;
-    -webkit-animation-duration: 18s;
+    -webkit-animation-duration: 10s;
     -webkit-animation-iteration-count: infinite;
     animation-name: change;
-    animation-duration: 18s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
   }
 }
@@ -393,7 +393,7 @@ section {
   }
 }
 
-.work-container {
+.project-container {
   overflow: hidden;
   margin-bottom: 15px;
   padding: 0;
@@ -412,8 +412,8 @@ section {
   }
 
   img {
-    opacity: 0.4;
-    transition: opacity 1.5s, transform 8s linear;
+    opacity: 0.55;
+    transition: opacity 1.5s, transform 16s linear;
   }
 
   &:hover img {
@@ -422,7 +422,7 @@ section {
   }
 }
 
-#works-section {
+#projects-section {
   .row {
     padding: 0 1.25rem;
   }
@@ -443,7 +443,7 @@ section {
 }
 
 // ============
-// WORK
+// PROJECTS
 // ============
 
 
@@ -527,7 +527,7 @@ section {
 
     .homepage-hero-section {
       h1 {
-        font-size: 35px;
+        font-size: 2.188rem;
       }
 
       .hero-contents-container {
@@ -535,7 +535,7 @@ section {
 
         .hero-jap {
           h1 {
-            font-size: 28px;
+            font-size: 1.75rem;
             font-family: harenosora;
           }
         }
@@ -561,7 +561,7 @@ section {
     }
 
     // ============
-    // WORK
+    // PROJECTS
     // ============
 }
 
@@ -637,7 +637,7 @@ section {
     // INDEX
     // ============
 
-    .work-container {
+    .project-container {
       h2 {
         font-size: 3rem;
       }
@@ -648,6 +648,71 @@ section {
     }
 
     // ============
-    // WORK
+    // PROJECTS
+    // ============
+}
+
+// =============================================
+// =============================================
+// DESKTOP LARGE
+// =============================================
+// =============================================
+
+@media screen and (min-width: 90em) {
+    // ============
+    // BASE STYLES
+    // ============
+    
+    // ============
+    // HEADER
+    // ============
+
+    // ============
+    // FOOTER
+    // ============
+    
+    .page-footer {
+      .contact-form {
+        height: 250px;
+
+        h4 {
+          font-size: 30px;
+        }
+      }
+    }
+
+    // ============
+    // INDEX
+    // ============
+
+    .homepage-hero-section {
+      h1 {
+        font-size: 2.788rem;
+      }
+
+      .hero-contents-container {
+        height: 255px;
+
+        .hero-jap {
+          h1 {
+            font-size: 2.25rem;
+            font-family: harenosora;
+          }
+        }
+      }
+    }
+
+    .project-container {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    .section-title-container {
+      margin-bottom: 120px;
+    }
+
+    // ============
+    // PROJECTS
     // ============
 }
