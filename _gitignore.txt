@@ -3,3 +3,6 @@ bower_components
 node_modules
 npm-debug.log
 css
+
+# ignore folders
+node_modules/*
