@@ -54,3 +54,5 @@ if(!$(this).hasClass('active')) {
 });
 
 /* Works Section */
+
+Barba.Pjax.start();
