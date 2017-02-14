@@ -21,9 +21,9 @@
           </div>
 
           <ul class="nav-link-container mobile-hidden">
-            <li><a href="#projects-section">projects</a></li>
-            <li><a href="#about-section">about+contact</a></li>
-            <li><a href="index.html">en</a> / <a href="jp/index.html">jp</a> / <a href="#">es</a></li>
+            <li><a href="../index.html#ind">projects</a></li>
+            <li><a href="../index.html#about-section">about+contact</a></li>
+            <li><a href="../index.html">en</a> / <a href="jp/index.html">jp</a> / <a href="#">es</a></li>
           </ul>
 
           <ul class="burger-container flexbox mobile-only">
@@ -42,105 +42,31 @@
         </nav>
       </header>
 
-      <div class="homepage-hero-section flexbox">
-        <div class="hero-contents-container">
-          <ul>
-            <li>
-              <h1>Hi, I'm Takaaki Fukuda.<br>Freelance Web Designer/Developer<br>Based in Japan.</h1>
-            </li>
-            <li class="hero-jap">
-              <h1>こんにちは、福田孝昭と申します。<br>山口・福岡を中心に<br>フリーランスのWebデザイナーをしています。</h1>
-            </li>
-            <li>
-              <h1>Hola, Soy Takaaki Fukuda.<br>Desarrollador/Diseñador Web Freelance<br>de Japón.</h1>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="indicator-container centered">
-        <a href="#projects-section">
-          <p>projects</p>
-          <i class="fa fa-long-arrow-down"></i>
-        </a>
-      </div>
+      <div class="project-page-hero-section geataway-hero flexbox"></div>
       
-      <main>
-        <section id="projects-section">
+      <main class="project-page-main">
+        <section class="projects-desc">
+          <div class="projects-desc-container">
+            <h6>the getaway</h6>
+            <h5>logo design / website design &#38; development</h5>
+            <hr class=short-partation>
+            <p>Abysmal Lounge is a radio show based in Fukuoka, Japan which curates timeless music from around the world.<br>I designed their desktop version website in this project</p>
+          </div>
+        </section>
+
+        <section class="mockup-section">
           <div class="row">
-            <div class="project-container small-12 columns">
+            <div class="small-12 columns">
               <a href="#">
-                <h2>the getaway</h2>
-                <img src="images/index/getaway.png" alt="" />
-              </a>
-            </div>
-            <div class="project-container small-12 columns">
-              <a href="#">
-                <h2>fontboy</h2>
-                <img src="images/index/fontboy.png" alt="" />
-              </a>
-            </div>
-            <div class="project-container small-12 columns">
-              <a href="#">
-                <h2>richard herrington</h2>
-                <img src="images/index/richard.png" alt="" />
-              </a>
-            </div>
-            <div class="project-container small-12 columns">
-              <a href="#">
-                <h2>nhpd</h2>
-                <img src="images/index/nhpd.png" alt="" />
-              </a>
-            </div>
-            <div class="project-container small-12 columns">
-              <a href="#">
-                <h2>julie howgate</h2>
-                <img src="images/index/julie.png" alt="" />
-              </a>
-            </div>
-            <div class="project-container small-12 columns">
-              <a href="#">
-                <h2>ediphotos</h2>
-                <img src="images/index/ediphotos.png" alt="" />
-              </a>
-            </div>
-            <div class="project-container small-12 columns">
-              <a href="#">
-                <h2>abysmal lounge</h2>
-                <img src="images/index/abysmal.png" alt="" />
-              </a>
-            </div>
-            <div class="project-container small-12 columns">
-              <a href="#">
-                <h2>make your vote up</h2>
-                <img src="images/index/myvu.png" alt="" />
+                <img src="../images/projects/getaway.png" alt="">
               </a>
             </div>
           </div>
         </section>
 
-        <section id="about-section">
-          <div class="section-title-container">
-            <h3>about+contact</h3>
-          </div>
-
-          <div class="about-contents-container row">
-            <div class="about-image-container small-12 centered large-6 large-push-6 columns">
-              <img src="images/index/about.png" alt="" />
-            </div>
-
-            <div class="about-desc small-12 large-6 large-pull-6 columns">
-              <h6>overview</h6>
-              <p>Takaaki Fukuda is a web designer/developer in Japan. His web career began in Canada, where he studied Web Development &#38; Interactive Design at Vancouver Institute of Arts. During this time, he also started his professional career as a freelancer, designing and developing websites for local artists in Vancouver, BC. He graduated as one of the top students at VanArts.</p>
-              <p>In his spare time, he always learns new web technologies. Takaaki is also an active traveler, professional DJ for <a href="https://soundcloud.com/abysmal_lounge">Abysmal Lounge</a>, coffee enthusiast, and a good friend to many people around the world.</p>
-
-              <h6>skillset</h6>
-              <p>HTML5 / CSS3 / SASS / JavaScript / jQuery / AngularJS / React / node.js / PHP / MySQL / WordPress / git / Photoshop / Illustrator /  InDesign / Premier / AfterEffect / Sketh / Axure / SEO / UI / UX</p>
-
-              <h6>languages</h6>
-              <p>Japanese / English / Spanish</p>
-            </div>
-          </div>
+        <section class="links-section">
+          <a href="../index.html#ind"><i class="fa fa-angle-left"></i> more projects</a>
+          <a href="">visit the website <i class="fa fa-external-link"></i></a>
         </section>
       </main>
 
@@ -166,10 +92,10 @@
       </footer>
     </div>
     
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/what-input/dist/what-input.js"></script>
     <script src="https://use.fontawesome.com/3e04922903.js"></script>
-    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="../js/barba.min.js" type="text/javascript"></script>
     <script src="../js/app.js"></script>
   </body>

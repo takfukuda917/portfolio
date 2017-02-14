@@ -55,11 +55,11 @@ h3 {
 }
 
 h4 {
-
+  font-family: brandon-med;
 }
 
 h5 {
-
+  font-family: brandon-med;
 }
 
 h6 {
@@ -114,6 +114,11 @@ section {
   h3 {
     font-size: 14px;
   }
+}
+
+.inactive-link {
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .mobile-only {
@@ -449,6 +454,104 @@ section {
 // PROJECTS
 // ============
 
+.project-page-hero-section {
+  margin-top: 85px;
+  width:100vw; height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.geataway-hero {
+  background-image: url('../images/index/getaway.png');
+}
+
+.fontboy-hero {
+  background-image: url('../images/index/fontboy.png');
+}
+
+.richard-herrington-hero {
+  background-image: url('../images/projects/richard_hero.jpg');
+}
+
+.nhpd-hero {
+  background-image: url('../images/index/nhpd.png');
+}
+
+.julie-howgate-hero {
+  background-image: url('../images/index/julie.png');
+}
+
+.ediphotos-hero {
+  background-image: url('../images/index/ediphotos.png');
+}
+
+.abysmal-lounge-hero {
+  background-image: url('../images/index/abysmal.png');
+}
+
+.myvu-hero {
+  background-image: url('../images/index/myvu.png');
+}
+
+.projects-desc {
+  margin: 30px 0 35px 0;
+}
+
+.projects-desc-container {
+  text-align: center;
+  text-transform: uppercase;
+
+  h6 {
+    font-size: 23px;
+    margin-bottom: .2rem;
+  }
+
+  h5 {
+    text-transform: capitalize;
+    color: $darkgrey;
+    font-size: 14px;
+  }
+
+  hr {
+    max-width: 3.5rem;
+  }
+
+  p {
+    text-transform: none;
+    max-width: 17rem;
+    margin: auto;
+    font-size: 13.5px;
+  }
+}
+
+.mockup-section {
+  margin: 0;
+  padding: 50px 0;
+  background-color: $lightgrey;
+
+  img {
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.4);
+       -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.4);
+            box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.4);
+  }
+}
+
+.links-section {
+  margin: 30px 0 30px 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  a {
+    font-size: 13px;
+    border: solid 1px $black;
+    padding: 4px 8px;
+  }
+
+  a:last-child {
+    margin-left: 10px;
+  }
+}
 
 // =============================================
 // =============================================
@@ -460,7 +563,7 @@ section {
     // ============
     // BASE STYLES
     // ============
-    
+
     .mobile-only {
       display: none;
     }
@@ -566,6 +669,53 @@ section {
     // ============
     // PROJECTS
     // ============
+    
+    .project-page-hero-section {
+      height: 200px;
+    }
+
+    .geataway-hero {
+      background-position: center bottom;
+    }
+
+    .fontboy-hero {
+      background-position: center top;
+    }
+
+    .ediphotos-hero {
+      background-position: center bottom;
+    }
+
+    .projects-desc {
+      margin: 50px 0;
+    }
+
+    .projects-desc-container {
+      h6 {
+        font-size: 26px;
+      }
+
+      p {
+        max-width: 25rem;
+      }
+    }
+
+    .mockup-section {
+      padding: 70px 0;
+    }
+
+    .links-section {
+      margin: 60px 0;
+
+      a {
+        font-size: 15px;
+        padding: 6px 10px;
+      }
+
+      a:last-child {
+        margin-left: 15px;
+      }
+    }
 }
 
 
@@ -653,6 +803,48 @@ section {
     // ============
     // PROJECTS
     // ============
+    
+    .project-page-hero-section {
+      height: 300px;
+    }
+
+    // The Getaway
+    .projects-desc {
+      margin: 80px 0;
+    }
+
+    .projects-desc-container {
+
+      h6 {
+        font-size: 33px;
+      }
+
+      h5 {
+        font-size: 16px;
+      }
+
+      p {
+        max-width: 45rem;
+        font-size: 14.5px;
+      }
+    }
+
+    .mockup-section {
+      padding: 100px 0;
+    }
+
+    .links-section {
+      margin: 80px 0;
+
+      a {
+        font-size: 22px;
+        padding: 8px 15px;
+      }
+
+      a:last-child {
+        margin-left: 30px;
+      }
+    }
 }
 
 // =============================================
