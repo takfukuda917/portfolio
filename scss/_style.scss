@@ -499,42 +499,42 @@ section {
 
 .project-page-hero-section {
   margin-top: 85px;
-  width:100vw; height: 150px;
+  width:100%; height: 150px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .geataway-hero {
-  background-image: url('../images/index/getaway.png');
+  background-image: url('../images/projects/getaway_banner.png');
 }
 
 .fontboy-hero {
-  background-image: url('../images/index/fontboy.png');
+  background-image: url('../images/projects/fontboy_banner.png');
 }
 
 .richard-herrington-hero {
-  background-image: url('../images/projects/richard_hero.jpg');
+  background-image: url('../images/projects/rh_banner.png');
 }
 
 .nhpd-hero {
-  background-image: url('../images/index/nhpd.png');
+  background-image: url('../images/projects/nhpd_banner.png');
 }
 
 .julie-howgate-hero {
-  background-image: url('../images/index/julie.png');
+  background-image: url('../images/projects/julie_banner.png');
 }
 
 .ediphotos-hero {
-  background-image: url('../images/index/ediphotos.png');
+  background-image: url('../images/projects/ediphotos_banner.png');
 }
 
 .abysmal-lounge-hero {
-  background-image: url('../images/index/abysmal.png');
+  background-image: url('../images/projects/abysmal_banner.png');
 }
 
 .myvu-hero {
-  background-image: url('../images/index/myvu.png');
+  background-image: url('../images/projects/myvu_banner.png');
 }
 
 .projects-desc {
@@ -714,6 +714,7 @@ section {
     // ============
     
     .project-page-hero-section {
+      margin-top: 80px;
       height: 200px;
     }
 
@@ -848,6 +849,7 @@ section {
     // ============
     
     .project-page-hero-section {
+      margin-top: 105px;
       height: 300px;
     }
 
