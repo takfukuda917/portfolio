@@ -5,4 +5,4 @@ npm-debug.log
 css
 
 # ignore folders
-node_modules/
+node_modules/*

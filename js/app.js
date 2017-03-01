@@ -1,6 +1,9 @@
 /* Foundation */
 $(document).foundation();
 
+let clickDelay = 500;
+let clickDelayTimer = null;
+
 /* Header Border */
 function pageFunc() {
   $(window).on("scroll", function () {
@@ -23,8 +26,6 @@ function pageFunc() {
   });
 
   /* burger icon */
-  let clickDelay = 500;
-  let clickDelayTimer = null;
 
   $('.burger-click-region').on('click', function() {
     if(clickDelayTimer === null) {
@@ -55,11 +56,16 @@ function pageFunc() {
   });
 }
 
+// Call Func
 pageFunc();
 
 /* Works Section */
 
 /* Barba.js */
+Barba.Dispatcher.on('transitionCompleted', () => {
+  pageFunc();
+});
+
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     Promise
@@ -89,17 +95,47 @@ var FadeTransition = Barba.BaseTransition.extend({
   }
 });
 
+var GraphicDesign = Barba.BaseView.extend({
+  namespace: 'graphicDesign',
+  onEnterCompleted: function() {
+    $('.test-popup-link').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      closeOnContentClick: false,
+      closeBtnInside: false,
+      mainClass: 'mfp-with-zoom mfp-img-mobile',
+      image: {
+        verticalFit: true,
+        titleSrc: function(item) {
+          return item.el.attr('title');
+        }
+      },
+      gallery: {
+        enabled: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300, // don't foget to change the duration also in CSS
+        opener: function(element) {
+          return element.find('img');
+        }
+      }
+    });
+  }
+});
+
+// Don't forget to init the view!
+GraphicDesign.init();
+
 Barba.Pjax.getTransition = function() {
   return FadeTransition;
 };
 
 Barba.Pjax.start();
 
-Barba.Dispatcher.on('transitionCompleted', function() {
-  pageFunc();
-});
-
-// Ripple Effect
+///////////////////
+// Ripple Effect //
+///////////////////
 
 class RippleEffect {
   constructor(triggerClass = 'modal-trigger') {

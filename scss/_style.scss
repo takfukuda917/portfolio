@@ -168,6 +168,11 @@ section {
   }
 }
 
+// Image Gallery
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.9;
+}
+
 // ============
 // HEADER
 // ============
@@ -177,7 +182,7 @@ section {
   position: fixed;
   top: 0; left: 0;
   background-color: $white;
-  z-index: 999999999999999;
+  z-index: 999;
   border-bottom: solid 0 $lightgrey;
   transition: .3s;
 }
@@ -603,7 +608,7 @@ section {
     }
   }
 
-  a:last-child {
+  .website-link {
     margin-left: 10px;
   }
 }
@@ -768,7 +773,7 @@ section {
         padding: 6px 10px;
       }
 
-      a:last-child {
+      .website-link {
         margin-left: 15px;
       }
     }
@@ -898,7 +903,7 @@ section {
         padding: 8px 15px;
       }
 
-      a:last-child {
+      .website-link {
         margin-left: 30px;
       }
     }
