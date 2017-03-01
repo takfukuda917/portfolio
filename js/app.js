@@ -1,7 +1,6 @@
 /* Foundation */
 $(document).foundation();
 
-let clickDelay = 500;
 let clickDelayTimer = null;
 
 /* Header Border */
@@ -27,15 +26,28 @@ function pageFunc() {
 
   /* burger icon */
 
-  $('.burger-click-region').on('click', function() {
+  let open = false;
+
+  $('.burger-click-region').click(function(event) {
+    event.stopImmediatePropagation();
+
+    if(open) {
+      $('.mobile-link-container').animate({right: '-300px'}, 50)
+                                 .animate({opacity: 0}, 10);
+      open = false;
+    } else {
+      $('.mobile-link-container').animate({right: 0}, 80)
+                                 .animate({opacity: 1}, 30);
+      open = true;
+    }
+
+    const $burger = $(this);
+
     if(clickDelayTimer === null) {
-      const $burger = $(this);
-      $burger.css('margin-bottom', '18px');
       $burger.toggleClass('active');
       $burger.parent().toggleClass('is-open');
 
       if(!$burger.hasClass('active')) {
-        $burger.css('margin-bottom', '12px');
         $burger.addClass('closing');
       }
 
@@ -43,16 +55,29 @@ function pageFunc() {
         $burger.removeClass('closing');
         clearTimeout(clickDelayTimer);
         clickDelayTimer = null;
-      }, clickDelay);
+      }, 500);
     }
 
-    if(!$(this).hasClass('active')) {
-      $('.mobile-link-container').animate({opacity: 0, right: '-300px'}, 100);
-      
-    } else {
-      $('.mobile-link-container').animate({opacity: 1})
-                                 .animate({right: 0}, 100);
-    }
+    $(window).one('scroll', function () {
+      $('.mobile-link-container').animate({right: '-300px'}, 50)
+                                 .animate({opacity: 0}, 10);
+      open = false;
+
+      if(clickDelayTimer === null) {
+        $burger.toggleClass('active');
+        $burger.parent().toggleClass('is-open');
+
+        if(!$burger.hasClass('active')) {
+          $burger.addClass('closing');
+        }
+
+        clickDelayTimer = setTimeout(() => {
+          $burger.removeClass('closing');
+          clearTimeout(clickDelayTimer);
+          clickDelayTimer = null;
+        }, 500);
+      }
+    });
   });
 }
 
@@ -98,7 +123,7 @@ var FadeTransition = Barba.BaseTransition.extend({
 var GraphicDesign = Barba.BaseView.extend({
   namespace: 'graphicDesign',
   onEnterCompleted: function() {
-    $('.test-popup-link').magnificPopup({
+    $('.imageGallery').magnificPopup({
       delegate: 'a',
       type: 'image',
       closeOnContentClick: false,
